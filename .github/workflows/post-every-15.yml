@@ -1,0 +1,27 @@
+name: rolid post every 15 minutes
+
+on:
+  schedule:
+    # every 15 minutes (UTC). github cron uses POSIX cron; minimum interval is 5 minutes.
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {} # allows manual run from Actions tab
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: post request with curl
+        env:
+          ROLI_COOKIE: ${{ secrets.ROLI_COOKIE }}
+        run: |
+          curl 'https://api.rolimons.com/tradeads/v1/createad' \
+            -X POST \
+            -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0' \
+            -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+            -H 'Accept-Language: en-US,en;q=0.5' \
+            -H 'Referer: https://www.rolimons.com/' \
+            -H 'Content-Type: application/json' \
+            -H 'Origin: https://www.rolimons.com' \
+            -H "Cookie: $ROLI_COOKIE" \
+            --data-raw '{"player_id":2251466007,"offer_item_ids":[1609401184],"request_item_ids":[],"request_tags":["any"]}' \
+            --fail --show-error --silent -w "\nhttp_status:%{http_code}\n"
