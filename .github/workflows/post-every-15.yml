@@ -1,20 +1,20 @@
-name: rolid post every 15 minutes
-
-on:
-  schedule:
-    - cron: '* * * * *'  # every 15 min UTC
-  workflow_dispatch: {}
-
-jobs:
-  post:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
-      - name: Install requests
-        run: pip install requests
-      - name: Run Rolimons POST
-        run: python rolimons_post.py
+#name: rolid post every 15 minutes
+#
+#on:
+#  schedule:
+#    - cron: '* * * * *'  # every 15 min UTC
+#  workflow_dispatch: {}
+#
+#jobs:
+#  post:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: Set up Python
+#        uses: actions/setup-python@v4
+#        with:
+#          python-version: 3.11
+#      - name: Install requests
+#        run: pip install requests
+#      - name: Run Rolimons POST
+#        run: python rolimons_post.py
