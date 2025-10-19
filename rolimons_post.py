@@ -28,8 +28,8 @@ HEADERS = {
 
 # permanent cookies (or use os.environ if stored as secrets)
 COOKIES = {
-    "_RoliVerification": "YOUR_VERIFICATION_COOKIE",
-    "_RoliData": "YOUR_DATA_COOKIE"
+    "_RoliVerification": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJwbGF5ZXJfZGF0YSI6eyJuYW1lIjoiMGhBbmpwIiwiaWQiOjIyNTE0NjYwMDd9LCJpYXQiOjE3NTcwMTY5MjYsImV4cCI6MTc2NDc5Mjk4Nn0.KhapXK4BIe_3Y4BvNqTfQUZewjM2kbEsUJ8YF9jQKWc",
+    "_RoliData": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJwbGF5ZXJfZGF0YSI6eyJuYW1lIjoiMGhBbmpwIiwiaWQiOjIyNTE0NjYwMDd9LCJpYXQiOjE3NTcwMTY5MjYsImV4cCI6MTc2NDc5Mjk4Nn0.A8d7c8BYbky5Vm0q9t2nplMhN6-h6JYrne3iyfwl4-UE"
 }
 
 # file to store last successful run
